@@ -94,7 +94,7 @@
                 const email = document.querySelector('#email');
                 const emailError = document.querySelector('.email-error');
                 email.addEventListener('input', function() 
-                {
+                {                      /* all regex rule on email UC-5*/
                 let emailRegex = RegExp('^[A-Za-z0-9]+(.[a-zA-Z0-9]+)?@[a-zA-Z]+.[a-zA-Z]{2,}(.[A-Za-z]{2,})?$');
                 if (emailRegex.test(email.value)) 
                 emailError.textContent = "";
