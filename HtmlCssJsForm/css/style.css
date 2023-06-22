@@ -1,9 +1,122 @@
-body{
-    background-color: bisque;
+html, input{
+    font-family: sans-serif;
+    background-color: rgb(95, 241, 241);
+    
 }
-h1{
-    color: rgb(42, 48, 46);
-    margin-left: 350px;
-    margin-top: 200px;
+input{
+    border-radius: 8px;
+    border-style:solid;
+    
+    
+    
+}
+body{
+    width: 100%;
+    max-width: 600px;
+    margin:0px auto;
+    padding: 2em;
+}
+
+.headerContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    background: rgb(234, 149, 134);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+form {
+    margin-top: 50px;
+
+}
+div{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+label,input,button{
+    font: size 16px;
+    line-height: 1.5;
+
+}
+label{
+    text-align: right;
+    width: 30%;
+    margin-right: 2%;
+}
+input {
+    flex:auto;
+
+}
+button{
+   
+    margin:0 auto;
+    html, input{
+        font-family: sans-serif;
+        background-color: rgb(10, 211, 211);
+    }
+    body{
+        width: 100%;
+        max-width: 600px;
+        margin:0px auto;
+        padding: 2em;
+    }
+    
+    .headerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: tomato;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    form {
+        margin-top: 50px;
+    
+    }
+    div{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    label,input,button{
+        font: size 16px;
+        line-height: 1.5;
+    
+    }
+    label{
+        text-align: right;
+        width: 30%;
+        margin-right: 2%;
+    }
+    input {
+        flex:auto;
+    
+    }
+    button{
+        width: 70%;
+        margin:0 auto;
+    } 
+    error-output{
+        font-size:12px;
+        font-style:italic;
+        color: red;
+    }
+} 
+error-output{
+    font-size:12px;
+    font-style:italic;
+    color: red;
+    font-size: large;
+}
+button{
+    border-radius: 10px;
+    border-style: solid;
+    height: 40px;
+    width: 300px;
+    background-color: rgb(241, 146, 146);
+    font-size: large;
 
 }
