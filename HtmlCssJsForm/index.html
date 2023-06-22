@@ -37,6 +37,7 @@
         <div>
             <label for="number">number input type:</label>
             <input type="number" id="number" name="number">
+            <error-output class="number-error" for="number"></error-output>
         </div>
         <div>
             <label for="tel">tel input type:</label>
@@ -87,7 +88,17 @@
             }
             );
 
-
+            const number= document.querySelector('#number');
+            const numberError = document.querySelector('.number-error');
+            number.addEventListener('input', function()
+            {
+                let numberRegex=RegExp('^[1-9]{2}[ ]?[6789]{1}[0-9]{9}$');
+                if(numberRegex.test(number.value))
+                numberError.textContent="";
+                else
+                numberError.textContent="It is not a valid number";
+            }
+            );
 
            const salary=document.querySelector('#salary');
            const output= document.querySelector('.salary-output');
