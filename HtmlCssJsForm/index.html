@@ -22,8 +22,9 @@
             <error-output class="text-error" for ="text"></error-output>
         </div>
         <div>
-            <label for="pwd">password input type:</label>
-            <input type="password" id ="pwd" name="pwd" required>
+            <label for="password-Key">password input type:</label>
+            <input type="password" id ="password-Key" name="password-Key" required>
+            <error-output class="password-error" for="password-Key"></error-output>
         </div>
         <div>
             <label for="email">email input type:</label>
@@ -76,7 +77,21 @@
             }
             );
 
-         const email = document.querySelector('#email');
+            const password = document.querySelector('#password-Key');
+            const passwordError = document.querySelector('.password-error');
+            password.addEventListener('input', function() {
+                let passwordRegex = RegExp('^[A-Za-z]{8,}$');
+                if (passwordRegex.test(password.value)) 
+                {
+                passwordError.textContent = "";
+                } 
+                else 
+                {
+                 passwordError.textContent = "Password is incorrect!";
+                }
+                });
+
+                const email = document.querySelector('#email');
                 const emailError = document.querySelector('.email-error');
                 email.addEventListener('input', function() 
                 {
@@ -99,6 +114,8 @@
                 numberError.textContent="It is not a valid number";
             }
             );
+
+            
 
            const salary=document.querySelector('#salary');
            const output= document.querySelector('.salary-output');
